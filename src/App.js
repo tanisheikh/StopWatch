@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-
+ import Stopwatch from '../src/Stop_Watch/Stopwatch';
+ import CountDown from './Stop_Watch/CountDown';
+//  import TimerCss from './Stop_Watch/TimerCss' ;
+ 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<>
+  {/* <Stopwatch/>  */}
+  
+  <CountDown futureDate={'2023-03-22T19:42:00'} circleRadius={120} CounterTitle={"Count Down"}/>    
+   {/* <TimerCss/>  */}
+  </>
   );
 }
 

@@ -36,3 +36,237 @@
     transform: rotate(360deg);
   }
 }
+.stop-watch {
+  height: 85vh;
+  width: 23vw;
+  background-color: #464462;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App {
+  background-color: rgb(238, 238, 238);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.timer {
+  margin: 3rem 0;
+  width: 100%;
+  display: flex;
+  height: 12%;
+  justify-content: center;
+  align-items: center;
+}
+
+.digits {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  color: #f5f5f5;
+}
+
+.mili-sec {
+  color: #e42a2a;
+}
+<pre > .Control-Buttons {
+  margin: 3rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 14px;
+  margin: 0px 6px;
+  display: flex;
+  border: 2px solid #e42a2a;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #f5f5f5;
+}
+
+.btn-one {
+  background-color: #e42a2a;
+}
+
+.add-btn {
+  width: 32px;
+  border: 2px solid white;
+  height: 32px;
+  border-radius: 15%;
+  text-align: center;
+  margin-left: 10px;
+}
+.plusIcon {
+  margin-top: 6px;
+  color: aliceblue;
+}
+.tableStyle {
+  margin-top: -40%;
+}
+.cardview {
+  background-color: #5178ad !important;
+  background-image: linear-gradient(#5178ad, #5591b6, #62b7c1) !important;
+  width: 70%;
+  height: 400px;
+}
+.circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #e6dcdc;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  font-family: "ArchivoNarrow";
+  color: #e6dcdc;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  margin-left: 4.6rem;
+  justify-content: center;
+}
+.time {
+  position: absolute;
+  font: 32px Arial, sans-serif;
+  font-family: "ArchivoNarrow";
+  top: 32%;
+  left: 36%;
+  color: #e6dcdc;
+}
+.title {
+  color: #e6dcdc;
+  margin-left: 30px;
+}
+.CounterTitle {
+  color: #e6dcdc;
+  margin-left: 42%;
+  font-size: 40px;
+  margin-top: -50px;
+}
+.mainCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.circleAnimation {
+  position: relative;
+  z-index: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  overflow: hidden;
+  padding: 2rem;
+  border: 4px solid #e6dcdc;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  /* Rotate the circle */
+}
+.circleAnimation:before {
+  content: "";
+  display: block;
+}
+
+.circle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120p;
+  margin-bottom: 10px;
+}
+.circle-wrapper .time {
+  position: absolute;
+}
+
+/* stop watch css */
+
+/* .main-Circle{
+  width: 100px;
+  height: 100px;
+} */
+.base-timers {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 8px solid gray;
+  border-radius: 50%;
+}
+.base-timer__circle {
+  fill: none;
+  border: none;
+}
+
+/* .base-timer_path-elapsed {
+ 
+  border: 8px solid gray;
+  border-radius: 50%;
+} */
+.base-timer__label {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.base-timer_secondCircle {
+  color: green;
+}
+.base-timer-remaining {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid green;
+  /* transform-origin: center; */
+  /* transform: rotate(360deg); */
+  /* transition: 1s linear all; */
+  /* border-bottom-color: transparent;
+    border-left-color: transparent; */
+  animation: circle 4s linear infinite;
+}
+.base-timer {
+  transform: scaleX();
+}
+@keyframes circle {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
