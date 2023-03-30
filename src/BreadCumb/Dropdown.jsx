@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Dropdown = (props) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
-const callBackFunc=props.onElementClick
+  const callBackFunc = props.onElementClick;
   const jsonPath = props.paths;
 
   const listArray = jsonPath.filter((list, i, array) => {
@@ -14,43 +14,43 @@ const callBackFunc=props.onElementClick
     setIsOptionsOpen(!isOptionsOpen);
   };
 
-  
-  console.log("listArray", listArray);
+//   console.log("listArray", listArray);
   debugger;
 
-  
-
   debugger;
-  
+
   return (
     <>
-     
-        <div>
-          <button
-            type="button"
-            aria-aria-haspopup="listbox"
-            aria-expanded={isOptionsOpen}
-            className={isOptionsOpen ? "expanded" : ""}
-            onClick={toggleOptions}
-          >
-            ...{" "}
-          </button>
-          <ul
-            role="listbox"
-            aria-activedescendant={listArray[0]}
-            className={`options ${isOptionsOpen ? "show" : ""}`}
-          >
-            {listArray.map((item) => {
-              return (
-                <li id={item} role="option" onClick={()=>{callBackFunc(item.displaylabel)}  
-                  }>
-                  {item.displaylabel}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      
+      <div>
+        <button
+          type="button"
+          aria-aria-haspopup="listbox"
+          aria-expanded={isOptionsOpen}
+          className={isOptionsOpen ? "expanded" : ""}
+          onClick={toggleOptions}
+        >
+          ...{" "}
+        </button>
+        <ul
+          role="listbox"
+          aria-activedescendant={listArray[0]}
+          className={`options ${isOptionsOpen ? "show" : ""}`}
+        >
+          {listArray.map((item) => {
+            return (
+              <li
+                id={item}
+                role="option"
+                onClick={() => {
+                  callBackFunc(item.displaylabel);
+                }}
+              >
+                {item.displaylabel}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 };

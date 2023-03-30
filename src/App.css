@@ -293,11 +293,13 @@
   /* justify-content: center;
   align-items: center; */
   margin-left: 30%;
+  z-index: 1;
 }
 
 .uLDiv {
   position: absolute;
   margin-top: 15px;
+  z-index:2
 }
 ul{
   margin-top:20px
@@ -446,6 +448,10 @@ li.clickFun{
   vertical-align: middle; */
 }
 /* dropdown Css */
+ div.dropDiv{
+  position: relative;
+  z-index: 3;
+ }
 div.wrapper{
   display: flex;
   justify-content: center;
@@ -473,7 +479,7 @@ ul.options {
   border-radius: 6px;
   font-family:serif ;
   z-index: 2;
-bottom: 20px; 
+top: 17%; 
 background-color:#eeeee4 ;
   
 }
