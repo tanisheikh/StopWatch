@@ -21,12 +21,12 @@ const Dropdown = (props) => {
 
   return (
     <>
-      <div>
+      <div className="dropDiv">
         <button
           type="button"
           aria-aria-haspopup="listbox"
           aria-expanded={isOptionsOpen}
-          className={isOptionsOpen ? "expanded" : ""}
+          className={"btnToggle" + " " +isOptionsOpen ? "expanded" : "" }
           onClick={toggleOptions}
         >
           ...{" "}
